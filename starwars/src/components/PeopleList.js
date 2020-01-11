@@ -1,11 +1,16 @@
 import React from "react";
 import PeopleCard from "./PeopleCard";
+import styled from "styled-components";
+
+const CardDetail = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
 
 export default function PeopleList(props) {
-  console.log(props.people);
-
   return (
-    <div>
+    <CardDetail>
       {props.people.map(person => {
         return (
           <PeopleCard
@@ -20,6 +25,6 @@ export default function PeopleList(props) {
           />
         );
       })}
-    </div>
+    </CardDetail>
   );
 }
